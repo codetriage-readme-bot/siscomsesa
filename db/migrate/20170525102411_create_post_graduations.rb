@@ -4,7 +4,7 @@ class CreatePostGraduations < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :initials
       t.integer :seniority
-      t.string :status
+      t.integer :status
 
       t.timestamps
     end

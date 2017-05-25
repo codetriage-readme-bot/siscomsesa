@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170525102411) do
     t.string "name"
     t.string "initials"
     t.integer "seniority"
-    t.string "status"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
