@@ -1,0 +1,37 @@
+<%= form_with(model: post_graduation, local: true) do |form| %>
+  <% if post_graduation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post_graduation.errors.count, "error") %> prohibited this post_graduation from being saved:</h2>
+
+      <ul>
+      <% post_graduation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :post_graduation_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initials %>
+    <%= form.text_field :initials, id: :post_graduation_initials %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seniority %>
+    <%= form.number_field :seniority, id: :post_graduation_seniority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :post_graduation_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

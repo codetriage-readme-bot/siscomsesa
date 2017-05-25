@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @post_graduation.name %>
+</p>
+
+<p>
+  <strong>Initials:</strong>
+  <%= @post_graduation.initials %>
+</p>
+
+<p>
+  <strong>Seniority:</strong>
+  <%= @post_graduation.seniority %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @post_graduation.status %>
+</p>
+
+<%= link_to 'Edit', edit_post_graduation_path(@post_graduation) %> |
+<%= link_to 'Back', post_graduations_path %>

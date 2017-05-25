@@ -1,0 +1,2 @@
+class PostGraduation < ApplicationRecord
+end
