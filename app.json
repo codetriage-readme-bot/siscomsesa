@@ -1,0 +1,13 @@
+{
+  "name": "SiscomSESA",
+  "description": "Sistema de Recebimento de Visitas da ESA",
+  "keywords": [
+    "rails",
+    "ruby"
+  ]
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
