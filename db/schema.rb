@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_170_525_102_411) do
-  create_table 'post_graduations', force: :cascade do |t|
-    t.string 'name'
-    t.string 'initials'
-    t.integer 'seniority'
-    t.integer 'status'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema.define(version: 20170525102411) do
+
+  create_table "post_graduations", force: :cascade do |t|
+    t.string "name"
+    t.string "initials"
+    t.integer "seniority"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end

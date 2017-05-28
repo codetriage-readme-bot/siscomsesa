@@ -1,2 +1,8 @@
 pt-BR:
-
+  post_graduations:
+    form:
+      initials: 'Sigla'
+      name: 'Nome'
+      seniority: 'Antiguidade'
+      status: 'Status'
+      submit: 'Salvar'
