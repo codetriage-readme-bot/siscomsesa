@@ -1,5 +1,5 @@
 class PostGraduationsController < ApplicationController
-  before_action :set_post_graduation, only: [:show, :edit, :update, :destroy]
+  before_action :set_post_graduation, only: %i[show edit update destroy]
 
   # GET /post_graduations
   # GET /post_graduations.json
@@ -9,8 +9,7 @@ class PostGraduationsController < ApplicationController
 
   # GET /post_graduations/1
   # GET /post_graduations/1.json
-  def show
-  end
+  def show; end
 
   # GET /post_graduations/new
   def new
@@ -18,8 +17,7 @@ class PostGraduationsController < ApplicationController
   end
 
   # GET /post_graduations/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /post_graduations
   # POST /post_graduations.json
@@ -62,13 +60,14 @@ class PostGraduationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post_graduation
-      @post_graduation = PostGraduation.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_graduation_params
-      params.require(:post_graduation).permit(:name, :initials, :seniority, :status)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post_graduation
+    @post_graduation = PostGraduation.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def post_graduation_params
+    params.require(:post_graduation).permit(:name, :initials, :seniority, :status)
+  end
 end

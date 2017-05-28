@@ -1,3 +1,3 @@
 class PostGraduation < ApplicationRecord
-  enum status: [:active, :inactive]
+  enum status: %i[active inactive]
 end

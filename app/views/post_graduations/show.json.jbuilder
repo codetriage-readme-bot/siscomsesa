@@ -1,1 +1,1 @@
-json.partial! "post_graduations/post_graduation", post_graduation: @post_graduation
+json.partial! 'post_graduations/post_graduation', post_graduation: @post_graduation
