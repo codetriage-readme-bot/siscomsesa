@@ -14,12 +14,17 @@ gem 'rails_12factor', group: :production
 # Devise for authentications
 gem 'devise'
 
+# Use bootstrap framework
 gem 'bootstrap-sass'
-
 gem 'jquery-rails'
 
+# Use rails_admin gem for administrator site
 gem 'rails_admin'
 
+# Use gem i18n in rails
+gem 'rails-i18n'
+
+# Use erubis for boot framework remove afeter
 gem 'erubis'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
