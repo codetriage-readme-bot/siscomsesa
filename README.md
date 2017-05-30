@@ -1,5 +1,7 @@
 # README
 
+[![Dependency Status](https://gemnasium.com/badges/github.com/diegobiavati/siscomsesa.svg)](https://gemnasium.com/github.com/diegobiavati/siscomsesa)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
