@@ -7,13 +7,13 @@ RSpec.describe 'post_graduations/index', type: :view do
                name: 'Name',
                initials: 'Initials',
                seniority: 2,
-               status: 'Status'
+               status: 0
              ),
              PostGraduation.create!(
                name: 'Name',
                initials: 'Initials',
                seniority: 2,
-               status: 'Status'
+               status: 0
              )
            ])
   end
@@ -23,6 +23,6 @@ RSpec.describe 'post_graduations/index', type: :view do
     assert_select 'tr>td', text: 'Name'.to_s, count: 2
     assert_select 'tr>td', text: 'Initials'.to_s, count: 2
     assert_select 'tr>td', text: 2.to_s, count: 2
-    assert_select 'tr>td', text: 'Status'.to_s, count: 2
+    assert_select 'tr>td', text: "active".to_s, count: 2
   end
 end

@@ -6,7 +6,7 @@ RSpec.describe 'post_graduations/new', type: :view do
                                name: 'MyString',
                                initials: 'MyString',
                                seniority: 1,
-                               status: 'MyString'
+                               status: 0
     ))
   end
 
@@ -19,8 +19,6 @@ RSpec.describe 'post_graduations/new', type: :view do
       assert_select 'input[name=?]', 'post_graduation[initials]'
 
       assert_select 'input[name=?]', 'post_graduation[seniority]'
-
-      assert_select 'input[name=?]', 'post_graduation[status]'
     end
   end
 end
