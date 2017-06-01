@@ -28,11 +28,21 @@ RSpec.describe PostGraduationsController, type: :controller do
   # PostGraduation. As you add validations to PostGraduation, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+      {
+        name: 'MyString',
+        initials: 'MyString',
+        seniority: 1,
+        status: 'active'
+      }
   end
 
   let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
+    {
+      name: nil,
+      initials: nil,
+      seniority: nil,
+      status: nil
+    }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -96,7 +106,12 @@ RSpec.describe PostGraduationsController, type: :controller do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
+        {
+          name: 'New Name',
+          initials: 'New PG',
+          seniority: 49,
+          status: 'inactive'
+        }
       end
 
       it 'updates the requested post_graduation' do
