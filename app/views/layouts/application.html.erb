@@ -26,26 +26,12 @@
             <span class="icon-bar">
             </span>
           </button>
-        <a class="navbar-brand" href="#">
-          Project name
-        </a>
+        <%= link_to t('.application'), root_path, class: 'navbar-brand' %>
       </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="active">
-          <a href="#">
-            Home
-          </a>
-        </li>
-        <li>
-        <a href="#about">
-          About
-        </a>
-        </li>
-        <li>
-          <a href="#contact">
-            Contact
-          </a>
+          <%= link_to t('.post_graduation'), post_graduations_path %>
         </li>
       </ul>
     </div>
@@ -54,10 +40,8 @@
   </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
-    <%= link_to "Principal", root_path %>
 
     <%= yield %>
-    
+
   </body>
 </html>

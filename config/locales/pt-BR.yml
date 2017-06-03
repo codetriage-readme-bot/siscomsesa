@@ -1,4 +1,8 @@
 pt-BR:
+  layouts:
+    application:
+      application: 'SisComSESA'
+      post_graduation: 'Postos e Graduações'
   post_graduations:
     form:
       initials: 'Sigla'
