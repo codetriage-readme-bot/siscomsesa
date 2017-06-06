@@ -14,9 +14,8 @@ gem 'rails_12factor', group: :production
 # Devise for authentications
 gem 'devise'
 
-# Use bootstrap framework
-gem 'bootstrap-sass'
-gem 'jquery-rails'
+# Materialize Sass version for Rails Asset Pipeline 
+gem 'materialize-sass'
 
 # Use rails_admin gem for administrator site
 gem 'rails_admin'

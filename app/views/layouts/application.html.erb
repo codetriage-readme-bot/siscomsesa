@@ -3,8 +3,6 @@
   <head>
     <title>SisComSESA</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,32 +10,6 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">
-              Toggle navigation
-            </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
-          </button>
-        <%= link_to t('.application'), root_path, class: 'navbar-brand' %>
-      </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <%= link_to t('.post_graduation'), post_graduations_path %>
-        </li>
-      </ul>
-    </div>
-    <!--/.nav-collapse -->
-    </div>
-  </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
