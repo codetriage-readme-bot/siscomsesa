@@ -16,15 +16,13 @@ gem 'devise'
 
 # Materialize Sass version for Rails Asset Pipeline 
 gem 'materialize-sass'
+gem 'material_icons'
 
 # Use rails_admin gem for administrator site
 gem 'rails_admin'
 
 # Use gem i18n in rails
 gem 'rails-i18n'
-
-# Use erubis for boot framework remove afeter
-gem 'erubis'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
