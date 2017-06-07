@@ -14,9 +14,10 @@ gem 'rails_12factor', group: :production
 # Devise for authentications
 gem 'devise'
 
-# Materialize Sass version for Rails Asset Pipeline 
+# Materialize Sass version for Rails Asset Pipeline
 gem 'materialize-sass'
 gem 'material_icons'
+gem 'jquery-turbolinks'
 
 # Use rails_admin gem for administrator site
 gem 'rails_admin'
@@ -55,7 +56,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  
+
   # Use Brakeman
   gem 'brakeman'
 
