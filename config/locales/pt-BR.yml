@@ -1,6 +1,10 @@
 pt-BR:
   commands:
     back: Voltar
+    edit: Editar
+    destroy: Apagar
+    new: Novo
+    show: Exibir
   layouts:
     application:
       application: SisComSESA
@@ -17,3 +21,8 @@ pt-BR:
       submit: Salvar
     new:
       new: 'Novo Posto ou Graduação'
+    index:
+      index: 'Postos e Graduações'
+      name: Nome
+      initials: Abreviação
+      seniority: Antiguidade
