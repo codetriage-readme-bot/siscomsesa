@@ -26,7 +26,7 @@ class PostGraduationsController < ApplicationController
 
     respond_to do |format|
       if @post_graduation.save
-        format.html { redirect_to @post_graduation, notice: 'Post graduation was successfully created.' }
+        format.html { redirect_to post_graduations_path }
         format.json { render :show, status: :created, location: @post_graduation }
       else
         format.html { render :new }
