@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div class="card">
+  <div class="card-content">
+    <spam class="card-title">
+      <strong><%= t('.name')%></strong>
+      <%= @post_graduation.name %>
+    </spam>
 
-<p>
-  <strong><%= t('.name')%></strong>
-  <%= @post_graduation.name %>
-</p>
+    <p>
+      <strong><%= t('.initials') %></strong>
+      <%= @post_graduation.initials %>
+    </p>
 
-<p>
-  <strong><%= t('.initials') %></strong>
-  <%= @post_graduation.initials %>
-</p>
+    <p>
+      <strong><%= t('.seniority') %></strong>
+      <%= @post_graduation.seniority %>
+    </p>
 
-<p>
-  <strong><%= t('.seniority') %></strong>
-  <%= @post_graduation.seniority %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @post_graduation.status %>
-</p>
-
-<%= link_to t('commands.edit'), edit_post_graduation_path(@post_graduation) %> |
-<%= link_to t('commands.back'), post_graduations_path %>
+    <p>
+      <strong>Status:</strong>
+      <%= @post_graduation.status %>
+    </p>
+  </div>
+  <div class="card-action">
+    <%= link_to t('commands.edit'), edit_post_graduation_path(@post_graduation) %>
+    <%= link_to t('commands.back'), post_graduations_path %>
+  </div>
+</div>

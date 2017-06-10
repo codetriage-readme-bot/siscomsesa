@@ -1,40 +1,37 @@
-<div class='row'>
-  <%= form_with(model: post_graduation, local: true, class:['col s12']) do |form| %>
-    <% if post_graduation.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(post_graduation.errors.count, "error") %> prohibited this post_graduation from being saved:</h2>
-
-        <ul>
-          <% post_graduation.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <div class='row'>
-      <div class='input-field col s6'>
-        <%= form.text_field(:name, id: :post_graduation_name, placeholder: t('.ex_name')) %>
-        <%= form.label(t('.name')) %>
-      </div>
-
-      <div class='input-field col s6'>
-        <%= form.text_field(:initials, id: :post_graduation_initials, placeholder: t('.ex_initials')) %>
-        <%= form.label t('.initials') %>
-      </div>
-
-      <div class="input-field col s6">
-        <%= form.number_field(:seniority, id: :post_graduation_seniority, placeholder: t('.ex_seniority')) %>
-        <%= form.label t('.seniority') %>
-      </div>
-
-      <div class="input-field col s6">
-        <%= form.select(:status, PostGraduation.statuses.keys) %>
-        <%= form.label(t('.status')) %>
-      </div>
-
-      <div class="actions">
-        <%= form.submit t('.submit') %>
-      </div>
+<%= form_with(model: post_graduation, local: true, class:['col s12']) do |form| %>
+  <% if post_graduation.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(post_graduation.errors.count, "error") %> prohibited this post_graduation from being saved:</h2>
+      <ul>
+        <% post_graduation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
-</div>
+  <div class='row'>
+    <div class='input-field col s6'>
+      <%= form.text_field(:name, id: :post_graduation_name, placeholder: t('.ex_name')) %>
+      <%= form.label(t('.name')) %>
+    </div>
+
+    <div class='input-field col s6'>
+      <%= form.text_field(:initials, id: :post_graduation_initials, placeholder: t('.ex_initials')) %>
+      <%= form.label t('.initials') %>
+    </div>
+
+    <div class="input-field col s6">
+      <%= form.number_field(:seniority, id: :post_graduation_seniority, placeholder: t('.ex_seniority')) %>
+      <%= form.label t('.seniority') %>
+    </div>
+
+    <div class="input-field col s6">
+      <%= form.select(:status, PostGraduation.statuses.keys) %>
+      <%= form.label(t('.status')) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit(t('.submit'), class: 'btn') %>
+    </div>
+  </div>
+<% end %>
