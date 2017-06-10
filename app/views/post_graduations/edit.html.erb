@@ -1,6 +1,6 @@
-<h1>Editing Post Graduation</h1>
+<h3 class='header'><%= t('.edit')%></h3>
 
 <%= render 'form', post_graduation: @post_graduation %>
 
-<%= link_to 'Show', @post_graduation %> |
-<%= link_to 'Back', post_graduations_path %>
+<%= link_to t('commands.show'), @post_graduation %> |
+<%= link_to t('commands.back'), post_graduations_path %>

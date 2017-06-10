@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('.index') %></h1>
+<h3 class='header'><%= t('.index') %></h3>
 
 <table class='striped'>
   <thead>
@@ -22,7 +22,7 @@
         <td><%= post_graduation.status %></td>
         <td><%= link_to t('commands.show'), post_graduation %></td>
         <td><%= link_to t('commands.edit'), edit_post_graduation_path(post_graduation) %></td>
-        <td><%= link_to t('commands.destroy'), post_graduation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('commands.destroy'), post_graduation, method: :delete, data: { confirm: t('mensages.confirm_destroy') } %></td>
       </tr>
     <% end %>
   </tbody>

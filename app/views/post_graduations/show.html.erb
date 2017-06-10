@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('.name')%></strong>
   <%= @post_graduation.name %>
 </p>
 
 <p>
-  <strong>Initials:</strong>
+  <strong><%= t('.initials') %></strong>
   <%= @post_graduation.initials %>
 </p>
 
 <p>
-  <strong>Seniority:</strong>
+  <strong><%= t('.seniority') %></strong>
   <%= @post_graduation.seniority %>
 </p>
 
@@ -20,5 +20,5 @@
   <%= @post_graduation.status %>
 </p>
 
-<%= link_to 'Edit', edit_post_graduation_path(@post_graduation) %> |
-<%= link_to 'Back', post_graduations_path %>
+<%= link_to t('commands.edit'), edit_post_graduation_path(@post_graduation) %> |
+<%= link_to t('commands.back'), post_graduations_path %>
