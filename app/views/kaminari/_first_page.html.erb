@@ -8,10 +8,10 @@
 -%>
 <% if current_page.first? %>
   <li class="disabled">
-    <%= link_to material_icon.chevron_left, url, remote: remote %>
+    <%= link_to material_icon.first_page, url, remote: remote %>
   </li>
 <% else %>
   <li class="waves-effect">
-    <%= link_to material_icon.chevron_left, url, remote: remote %>
+    <%= link_to material_icon.first_page, url, remote: remote %>
   </li>
 <% end %>
