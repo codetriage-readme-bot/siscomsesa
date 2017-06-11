@@ -1,5 +1,10 @@
 @import "materialize";
+@import "material_icons";
 
-.header{
-  color: #00897b;
+.header {
+  @extend .teal-text, .text-darken-4;
+}
+
+.nav-wrapper {
+  @extend .teal, .darken-4;
 }

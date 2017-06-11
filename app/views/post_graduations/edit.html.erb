@@ -1,6 +1,10 @@
-<h1>Editing Post Graduation</h1>
-
-<%= render 'form', post_graduation: @post_graduation %>
-
-<%= link_to 'Show', @post_graduation %> |
-<%= link_to 'Back', post_graduations_path %>
+<div class="card">
+  <div class="card-content">
+    <spam class="card-title"><%= t('.edit')%></spam>
+    <%= render 'form', post_graduation: @post_graduation %>
+  </div>
+  <div class='card-action'>
+    <%= link_to t('commands.show'), @post_graduation %>
+    <%= link_to t('commands.back'), post_graduations_path %>
+  </div>
+</div>

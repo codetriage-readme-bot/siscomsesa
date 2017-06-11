@@ -1,5 +1,10 @@
-<h2 class='header'><%= t '.new' %></h2>
+<div class="card">
+  <div class="card-content">
+    <spam class='card-title'><%= t '.new' %></spam>
 
-<%= render 'form', post_graduation: @post_graduation %>
-
-<%= link_to t('commands.back'), post_graduations_path %>
+    <%= render 'form', post_graduation: @post_graduation %>
+  </div>
+  <div class="card-action">
+    <%= link_to t('commands.back'), post_graduations_path %>
+  </div>
+</div>

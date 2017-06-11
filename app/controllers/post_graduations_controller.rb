@@ -4,7 +4,7 @@ class PostGraduationsController < ApplicationController
   # GET /post_graduations
   # GET /post_graduations.json
   def index
-    @post_graduations = PostGraduation.all
+    @post_graduations = PostGraduation.order(seniority: :asc).page params[:page]
   end
 
   # GET /post_graduations/1
@@ -26,7 +26,7 @@ class PostGraduationsController < ApplicationController
 
     respond_to do |format|
       if @post_graduation.save
-        format.html { redirect_to @post_graduation, notice: 'Post graduation was successfully created.' }
+        format.html { redirect_to post_graduations_path }
         format.json { render :show, status: :created, location: @post_graduation }
       else
         format.html { render :new }
