@@ -4,7 +4,7 @@ class PostGraduationsController < ApplicationController
   # GET /post_graduations
   # GET /post_graduations.json
   def index
-    @post_graduations = PostGraduation.all
+    @post_graduations = PostGraduation.order(seniority: :asc).page params[:page]
   end
 
   # GET /post_graduations/1

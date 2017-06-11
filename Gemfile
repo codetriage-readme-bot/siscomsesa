@@ -22,6 +22,8 @@ gem 'jquery-turbolinks'
 # Use rails_admin gem for administrator site
 gem 'rails_admin'
 
+gem 'kaminari'
+
 # Use gem i18n in rails
 gem 'rails-i18n'
 
