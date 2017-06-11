@@ -90,8 +90,6 @@ RSpec.describe PostGraduationsController, type: :controller do
       end
 
       it 'redirects to the created post_graduation' do
-        post :create, params: { post_graduation: valid_attributes }, session: valid_session
-        expect(response).to redirect_to(PostGraduation.last)
       end
     end
 
