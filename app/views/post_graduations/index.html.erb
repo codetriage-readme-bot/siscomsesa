@@ -16,7 +16,7 @@
       <tr>
         <td><%= post_graduation.name %></td>
         <td><%= post_graduation.initials %></td>
-        <td><%= post_graduation.status %></td>
+        <td><%= t("activerecord.attributes.post_graduation.statuses.#{post_graduation.status}") %></td>
         <td>
           <%= link_to material_icon.visibility, post_graduation, class: 'btn' %>
           <%= link_to material_icon.edit, edit_post_graduation_path(post_graduation),
