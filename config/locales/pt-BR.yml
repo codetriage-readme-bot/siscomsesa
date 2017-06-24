@@ -13,12 +13,14 @@ pt-BR:
     show: Exibir
   layouts:
     application:
+      admin: Administrador
       application: SisComSESA
       contact: Desenvolvedor
+      email: E-Mail da ESA
       mission: Atender com qualidade o público da ESA
       owner: Seção de Comunicação Social da ESA
       post_graduation: 'Postos e Graduações'
-      admin: Administrador
+      site: Site da ESA
   mensages:
     confirm_destroy: 'Tem certeza?'
   post_graduations:
