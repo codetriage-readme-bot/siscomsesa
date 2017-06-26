@@ -40,6 +40,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    annotate (2.7.2)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 13.0)
     arel (8.0.0)
     bcrypt (3.1.11)
     better_errors (2.1.1)
@@ -101,6 +104,9 @@ GEM
       guard (~> 2.2)
       guard-compat (~> 1.1)
     guard-compat (1.2.1)
+    guard-ctags-bundler (1.4.0)
+      guard (>= 2.0)
+      guard-compat (>= 0.1.0)
     guard-migrate (2.0.0)
       activerecord (>= 4.1.0)
       guard (~> 2.3)
@@ -312,6 +318,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   better_errors
   binding_of_caller
   brakeman
@@ -321,6 +328,7 @@ DEPENDENCIES
   devise
   guard
   guard-bundler
+  guard-ctags-bundler
   guard-migrate
   guard-rails
   guard-rspec

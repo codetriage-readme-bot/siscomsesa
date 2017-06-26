@@ -1,17 +1,20 @@
 # == Schema Information
 #
-# Table name: post_graduations
+# Table name: branches
 #
 #  id         :integer          not null, primary key
 #  name       :string
-#  initials   :string
-#  seniority  :integer
+#  number     :string
 #  status     :integer
+#  section_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_branches_on_section_id  (section_id)
+#
 
-require 'rails_helper'
-
-RSpec.describe PostGraduation, type: :model do
+class Branch < ApplicationRecord
+  belongs_to :section
 end
