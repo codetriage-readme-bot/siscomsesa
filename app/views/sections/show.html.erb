@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @section.name %>
+</p>
+
+<p>
+  <strong>Initials:</strong>
+  <%= @section.initials %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @section.status %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @section.observation %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @section.kind %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>
