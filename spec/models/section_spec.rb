@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: sections
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  initials    :string
+#  status      :integer
+#  observation :text
+#  kind        :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe Section, type: :model do
