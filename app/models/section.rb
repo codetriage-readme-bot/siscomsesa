@@ -13,5 +13,15 @@
 #
 
 class Section < ApplicationRecord
+  enum status: %i[active inactive]
   has_many :branch
+
+  def self.status_attributes_for_select
+    statuses.map do |status, _index|
+      [I18n.t(
+        "activerecord.attributes.#{model_name.i18n_key}.statuses.#{status}"
+      ),
+       status]
+    end
+  end
 end
