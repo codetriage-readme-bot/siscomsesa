@@ -25,3 +25,6 @@ gems.tags
 /yarn-error.log
 
 .byebug_history
+
+# Ignore swp file from vim
+*.swp
