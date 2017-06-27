@@ -1,4 +1,6 @@
+# Create table sections
 class CreateSections < ActiveRecord::Migration[5.1]
+  # Create table
   def change
     create_table :sections do |t|
       t.string :name
