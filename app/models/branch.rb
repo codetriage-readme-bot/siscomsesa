@@ -16,5 +16,7 @@
 #
 
 class Branch < ApplicationRecord
+  enum status: %i[active inactive]
+
   belongs_to :section
 end

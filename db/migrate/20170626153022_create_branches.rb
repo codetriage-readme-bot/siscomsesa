@@ -1,4 +1,6 @@
+# Create table branches
 class CreateBranches < ActiveRecord::Migration[5.1]
+  # Create table
   def change
     create_table :branches do |t|
       t.string :name

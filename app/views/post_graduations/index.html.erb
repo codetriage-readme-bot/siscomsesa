@@ -1,39 +1,47 @@
-<p id="notice"><%= notice %></p>
+<nav class="nav-extended">
+  <div class="container nav-content">
+    <span class="nav-title"><%= t('.index') %></span>
+    <div class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+      <%= link_to material_icon.add, new_post_graduation_path %>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h3 class='header'><%= t('.index') %></h3>
-<table class='striped bordered centered responsive-table'>
-  <thead>
-    <tr>
-      <th><%= t('.name') %></th>
-      <th><%= t('.initials') %></th>
-      <th><%= t('.status') %></th>
-      <th colspan="1"></th>
-    </tr17>
-  </thead>
-
-  <tbody>
-    <% @post_graduations.each do |post_graduation| %>
+  <table class='striped bordered centered responsive-table'>
+    <thead>
       <tr>
-        <td><%= post_graduation.name %></td>
-        <td><%= post_graduation.initials %></td>
-        <td><%= t("activerecord.attributes.post_graduation.statuses.#{post_graduation.status}") %></td>
-        <td>
-          <%= link_to material_icon.visibility, post_graduation, class: 'btn' %>
-          <%= link_to material_icon.edit, edit_post_graduation_path(post_graduation),
-            class: 'btn' %>
-          <%= link_to material_icon.delete, post_graduation,
-            method: :delete,class: 'btn red',
-            data: { confirm: t('mensages.confirm_destroy') } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <th><%= t('.name') %></th>
+        <th><%= t('.initials') %></th>
+        <th><%= t('.status') %></th>
+        <th colspan="1"></th>
+      </tr17>
+    </thead>
 
-<%= paginate @post_graduations %>
+    <tbody>
+      <% @post_graduations.each do |post_graduation| %>
+        <tr>
+          <td><%= post_graduation.name %></td>
+          <td><%= post_graduation.initials %></td>
+          <td><%= t("activerecord.attributes.post_graduation.statuses.#{post_graduation.status}") %></td>
+          <td>
+            <%= link_to material_icon.visibility, post_graduation, class: 'btn' %>
+            <%= link_to material_icon.edit, edit_post_graduation_path(post_graduation),
+              class: 'btn' %>
+            <%= link_to material_icon.delete, post_graduation,
+              method: :delete,class: 'btn red',
+              data: { confirm: t('mensages.confirm_destroy') } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
+  <%= paginate @post_graduations %>
+</div>
 <div class="fixed-action-btn">
-  <div class="btn-floating btn-large waves-effect waves-light teal">
+  <div class="btn-floating btn-large waves-effect waves-light">
     <%= link_to material_icon.add, new_post_graduation_path %>
   </div>
 </div>
