@@ -11,14 +11,16 @@
 
   <body>
     <header>
-      <nav class="top-nav">
-        <div class="container">
-          <div class="nav-wrapper">
-            <%= link_to t('.application'), root_path, class: ['brand-logo center page-title'] %>
+      <div class='navbar-fixed'>
+        <nav>
+          <div class="container">
+            <div class="nav-wrapper">
+              <%= link_to t('.application'), root_path, class: ['brand-logo center page-title'] %>
+            </div>
           </div>
-        </div>
-        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><%= material_icon.menu %></a>
-      </nav>
+          <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><%= material_icon.menu %></a>
+        </nav>
+      </div>
 
       <!-- Sidenav -->
       <ul id="slide-out" class="side-nav">
@@ -34,7 +36,9 @@
           <li><a href="#!">Second Link</a></li>
           <li><div class="divider"></div></li>
           <li><a class="subheader"><%= t('.admin') %></a></li>
-          <li><%= link_to t('.post_graduation'), post_graduations_path, class: 'waves-effect'  %></li>
+          <li>
+            <%= link_to t('.post_graduation'), post_graduations_path, class: 'waves-effect'  %>
+          </li>
         </ul>
 
     </header>
