@@ -6,20 +6,20 @@
         <strong><%= t('.name')%></strong>
         <%= @post_graduation.name %>
       </spam>
-  
+
       <p>
         <strong><%= t('.initials') %></strong>
         <%= @post_graduation.initials %>
       </p>
-  
+
       <p>
         <strong><%= t('.seniority') %></strong>
         <%= @post_graduation.seniority %>
       </p>
-  
+
       <p>
-        <strong>Status:</strong>
-        <%= @post_graduation.status %>
+        <strong><%= t('.status') %></strong>
+        <%= t("activerecord.attributes.post_graduation.statuses.#{@post_graduation.status}") %>
       </p>
     </div>
     <div class="card-action">
@@ -28,4 +28,3 @@
     </div>
   </div>
 </div>
-

@@ -1,5 +1,12 @@
-<h1>New Branch</h1>
+<div class='container'>
+  <div class="card">
+    <div class="card-content">
+      <spam class='card-title'><%= t '.new' %></spam>
 
-<%= render 'form', branch: @branch %>
-
-<%= link_to 'Back', branches_path %>
+      <%= render 'form', branch: @branch %>
+    </div>
+    <div class="card-action">
+      <%= link_to t('commands.back'), branches_path %>
+    </div>
+  </div>
+</div>
