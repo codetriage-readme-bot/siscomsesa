@@ -1,10 +1,39 @@
 pt-BR:
   activerecord:
     attributes:
+      branch:
+        statuses:
+          active: Ativo
+          inactive: Desativado
       post_graduation:
         statuses:
-          active: "Ativo"
-          inactive: "Desativado"
+          active: Ativo
+          inactive: Desativado
+  branches:
+    edit:
+      edit: Editar Ramal
+    form:
+      ex_name: Ex. Expediente
+      ex_number: Ex. 4205
+      name: Nome
+      number: Número
+      section: Seção
+      status: Status
+      submit: Salvar
+    index:
+      index: Ramais
+      name: Nome
+      number: Número
+      section: Seção
+      status: Status
+    new:
+      new: Novo Ramal
+    show:
+      initials: 'Abreviação:'
+      name: 'Nome:'
+      number: 'Número:'
+      section: 'Seção:'
+      status: 'Status:'
   commands:
     back: Voltar
     edit: Editar
@@ -15,35 +44,37 @@ pt-BR:
     application:
       admin: Administrador
       application: SisComSESA
+      branches: Ramais
       contact: Desenvolvedor
       email: E-Mail da ESA
       mission: Atender com qualidade o público da ESA
       owner: Seção de Comunicação Social da ESA
       post_graduation: 'Postos e Graduações'
+      sections: Seções
       site: Site da ESA
   mensages:
-    confirm_destroy: 'Tem certeza?'
+    confirm_destroy: Tem certeza?
   post_graduations:
     edit:
-      edit: 'Editar Posto ou Graduação'
+      edit: Editar Posto ou Graduação
     form:
-      ex_initials: 'Ex. 2º Sgt'
-      ex_name: 'Ex. 2º Sargento'
-      ex_seniority: 'Número de 1 a 100'
+      ex_initials: Ex. 2º Sgt
+      ex_name: Ex. 2º Sargento
+      ex_seniority: Número de 1 a 100
       initials: Abreviação
       name: Nome
       seniority: Antiguidade
       status: Status
       submit: Salvar
     index:
-      index: 'Postos e Graduações'
+      index: Postos e Graduações
       name: Nome
       initials: Abreviação
       seniority: Antiguidade
     new:
-      new: 'Novo Posto ou Graduação'
+      new: Novo Posto ou Graduação
     show:
       name: 'Nome:'
       initials: 'Abreviação:'
       seniority: 'Antiguidade:'
-      confirm_delete: 'Tem certeza?'
+      status: 'Status:'
