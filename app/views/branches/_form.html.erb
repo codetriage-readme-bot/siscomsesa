@@ -1,37 +1,37 @@
-<%= form_with(model: branch, local: true) do |form| %>
+<%= form_with(model: branch, local: true, class:['col s12']) do |form| %>
   <% if branch.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(branch.errors.count, "error") %> prohibited this branch from being saved:</h2>
-
+  <div id="error_explanation">
+    <h2><%= pluralize(branch.errors.count, "error") %> prohibited this branch from being saved:</h2>
       <ul>
-      <% branch.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% branch.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
+  <div class='row'>
+    <div class='input-field col s6'>
+      <%= form.text_field(:name, id: :branch_name, placeholder: t('.ex_name')) %>
+      <%= form.label(t('.name')) %>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :branch_name %>
-  </div>
+    <div class='input-field col s6'>
+      <%= form.text_field(:number, id: :branch_number, placeholder: t('.ex_number')) %>
+      <%= form.label t('.number') %>
+    </div>
 
-  <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number, id: :branch_number %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.select(:section_id, Section.all.collect{ |section| [section.initials, section.id] }) %>
+      <%= form.label t('.section') %>
+    </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status, id: :branch_status %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.select(:status, Branch.status_attributes_for_select) %>
+      <%= form.label(t('.status')) %>
+    </div>
 
-  <div class="field">
-    <%= form.label :section_id %>
-    <%= form.text_field :section_id, id: :branch_section_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit(t('.submit'), class: 'btn') %>
+    </div>
   </div>
 <% end %>
