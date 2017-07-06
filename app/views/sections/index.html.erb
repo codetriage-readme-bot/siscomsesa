@@ -1,35 +1,47 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Sections</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Initials</th>
-      <th>Status</th>
-      <th>Observation</th>
-      <th>Kind</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sections.each do |section| %>
+<nav class="nav-extended">
+  <div class="container nav-content">
+    <span class="nav-title"><%= t('.sections') %></span>
+    <div class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+      <%= link_to material_icon.add, new_section_path %>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <table class='striped bordered centered responsive-table'>
+    <thead>
       <tr>
-        <td><%= section.name %></td>
-        <td><%= section.initials %></td>
-        <td><%= section.status %></td>
-        <td><%= section.observation %></td>
-        <td><%= section.kind %></td>
-        <td><%= link_to 'Show', section %></td>
-        <td><%= link_to 'Edit', edit_section_path(section) %></td>
-        <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Section', new_section_path %>
+        <th><%= t('.name') %></th>
+        <th><%= t('.initials') %></th>
+        <th><%= t('.kind') %></th>
+        <th><%= t('.status') %></th>
+        <th colspan="1"></th>
+      </tr17>
+    </thead>
+    <tbody>
+      <% @sections.each do |section| %>
+        <tr>
+          <td><%= section.name %></td>
+          <td><%= section.initials %></td>
+          <td><%= t("activerecord.attributes.section.kinds.#{section.kind}") %>
+          <td><%= t("activerecord.attributes.section.statuses.#{section.status}") %></td>
+          </td>
+          <td>
+            <%= link_to material_icon.visibility, section, class: 'btn' %>
+            <%= link_to material_icon.edit, edit_section_path(section),
+              class: 'btn' %>
+            <%= link_to material_icon.delete, section,
+              method: :delete,class: 'btn red',
+              data: { confirm: t('mensages.confirm_destroy') } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @sections %>
+</div>
+<div class="fixed-action-btn">
+  <div class="btn-floating btn-large waves-effect waves-light">
+    <%= link_to material_icon.add, new_section_path %>
+  </div>
+</div>

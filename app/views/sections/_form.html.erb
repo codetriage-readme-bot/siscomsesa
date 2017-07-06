@@ -1,42 +1,42 @@
-<%= form_with(model: section, local: true) do |form| %>
+<%= form_with(model: section, local: true, class:['col s12']) do |form| %>
   <% if section.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(section.errors.count, "error") %> prohibited this section from being saved:</h2>
-
+  <div id="error_explanation">
+    <h2><%= pluralize(section.errors.count, "error") %> prohibited this branch from being saved:</h2>
       <ul>
-      <% section.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% section.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
+  <div class='row'>
+    <div class='input-field col s6'>
+      <%= form.text_field(:name, id: :section_name, placeholder: t('.ex_name')) %>
+      <%= form.label(t('.name')) %>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :section_name %>
-  </div>
+    <div class='input-field col s6'>
+      <%= form.text_field(:initials, id: :section_initials, placeholder: t('.ex_initials')) %>
+      <%= form.label t('.initials') %>
+    </div>
 
-  <div class="field">
-    <%= form.label :initials %>
-    <%= form.text_field :initials, id: :section_initials %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.select(:kind, Section.kind_attributes_for_select) %>
+      <%= form.label(t('.kind')) %>
+    </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status, id: :section_status %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.select(:status, Section.status_attributes_for_select) %>
+      <%= form.label(t('.status')) %>
+    </div>
 
-  <div class="field">
-    <%= form.label :observation %>
-    <%= form.text_area :observation, id: :section_observation %>
-  </div>
+    <div class='input-field col s12'>
+      <%= form.text_field(:observation, id: :section_observation, placeholder: t('.ex_observation'), class: 'matearilize-textarea') %>
+      <%= form.label(t('.observation'), options: 'for=section_observation') %>
+    </div>
 
-  <div class="field">
-    <%= form.label :kind %>
-    <%= form.number_field :kind, id: :section_kind %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit(t('.submit'), class: 'btn') %>
+    </div>
   </div>
 <% end %>

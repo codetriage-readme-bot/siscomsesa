@@ -1,29 +1,46 @@
 <p id="notice"><%= notice %></p>
+<div class='container'>
+  <div class="card">
+    <div class="card-content">
+      <spam class="card-title">
+        <strong><%= t('.name')%></strong>
+        <%= @section.name %>
+      </spam>
 
-<p>
-  <strong>Name:</strong>
-  <%= @section.name %>
-</p>
+      <p>
+        <strong><%= t('.initials') %></strong>
+        <%= @section.initials %>
+      </p>
 
-<p>
-  <strong>Initials:</strong>
-  <%= @section.initials %>
-</p>
+      <p>
+        <strong><%= t('.kind') %></strong>
+        <%= @section.kind %>
+      </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @section.status %>
-</p>
+      <p>
+        <strong><%= t('.status') %></strong>
+        <%= t("activerecord.attributes.section.statuses.#{@section.status}") %>
+      </p>
 
-<p>
-  <strong>Observation:</strong>
-  <%= @section.observation %>
-</p>
+      <p>
+        <strong><%= t('.observation') %></strong>
+        <%= @section.observation %>
+      </p>
+    </div>
+    <div class="card-action">
+      <%= link_to t('commands.edit'), edit_section_path(@section) %>
+      <%= link_to t('commands.back'), sections_path %>
+    </div>
+  </div>
 
-<p>
-  <strong>Kind:</strong>
-  <%= @section.kind %>
-</p>
-
-<%= link_to 'Edit', edit_section_path(@section) %> |
-<%= link_to 'Back', sections_path %>
+  <div class=card>
+    <% @section.branch.each do |branch| %>
+      <div class="card">
+        <div class='card-content'>
+          <%= branch.name %><p />
+          <%= branch.number %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
