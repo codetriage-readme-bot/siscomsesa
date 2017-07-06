@@ -1,6 +1,12 @@
-<h1>Editing Section</h1>
-
-<%= render 'form', section: @section %>
-
-<%= link_to 'Show', @section %> |
-<%= link_to 'Back', sections_path %>
+<div class='container'>
+  <div class="card">
+    <div class="card-content">
+      <spam class="card-title"><%= t('.edit')%></spam>
+      <%= render 'form', section: @section %>
+    </div>
+    <div class='card-action'>
+      <%= link_to t('commands.show'), @section %>
+      <%= link_to t('commands.back'), sections_path %>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,16 @@ pt-BR:
         statuses:
           active: Ativo
           inactive: Desativado
+      section:
+        kinds:
+          cmdo: Cmdo
+          cia: Cia
+          em: EM
+          scmdo: S Cmdo
+          section: Seção
+        statuses:
+          active: Ativo
+          inactive: Desativado
   branches:
     edit:
       edit: Editar Ramal
@@ -77,4 +87,31 @@ pt-BR:
       name: 'Nome:'
       initials: 'Abreviação:'
       seniority: 'Antiguidade:'
+      status: 'Status:'
+  sections:
+    edit:
+      edit: Editar Seção
+    form:
+      ex_initials: Ex. RP
+      ex_name: Ex. Seção de Comunicação Social
+      ex_observation: Ex. Orientações sobre a seção, horários, etc.
+      initials: Abreviação
+      kind: Tipo
+      name: Nome
+      observation: Observações
+      status: Status
+      submit: Salvar
+    index:
+      name: Nome
+      initials: Abreviação
+      kind: Tipo
+      sections: Seções
+      status: Status
+    new:
+      new: Nova Seção
+    show:
+      name: 'Nome:'
+      initials: 'Abreviação:'
+      kind: 'Tipo:'
+      observation: 'Observações:'
       status: 'Status:'

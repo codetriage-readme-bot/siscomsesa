@@ -11,4 +11,13 @@ class ApplicationRecord < ActiveRecord::Base
        status]
     end
   end
+
+  def self.kind_attributes_for_select
+    kinds.map do |kind, _index|
+      [I18n.t(
+        "activerecord.attributes.#{model_name.i18n_key}.kinds.#{kind}"
+      ),
+       kind]
+    end
+  end
 end

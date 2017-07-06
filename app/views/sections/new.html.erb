@@ -1,5 +1,12 @@
-<h1>New Section</h1>
+<div class='container'>
+  <div class="card">
+    <div class="card-content">
+      <spam class='card-title'><%= t '.new' %></spam>
 
-<%= render 'form', section: @section %>
-
-<%= link_to 'Back', sections_path %>
+      <%= render 'form', section: @section %>
+    </div>
+    <div class="card-action">
+      <%= link_to t('commands.back'), sections_path %>
+    </div>
+  </div>
+</div>
