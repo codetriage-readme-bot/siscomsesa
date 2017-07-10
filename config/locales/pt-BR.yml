@@ -1,15 +1,37 @@
 pt-BR:
   activerecord:
+    models:
+      branch: Ramal
+      post_graduation: Posto e Graduação
+      section: Seção
     attributes:
       branch:
+        created_at: Criado em
+        name: Nome
+        number: Número
+        section: Seção
+        status: Status
         statuses:
           active: Ativo
           inactive: Desativado
       post_graduation:
+        created_at: Criado em
+        name: Nome
+        initials: Abreviatura
+        seniority: Antiguidade
+        status: Status
         statuses:
           active: Ativo
           inactive: Desativado
       section:
+        created_at: Criado em
+        name: Nome
+        initials: Abreviatura
+        kind: Tipo
+        observation: Observações
+        seniority: Antiguidade
+        status: Status
+        branch: Ramais
         kinds:
           cmdo: Cmdo
           cia: Cia
