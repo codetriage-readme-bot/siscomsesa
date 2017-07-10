@@ -21,6 +21,7 @@ gem 'jquery-turbolinks'
 
 # Use rails_admin gem for administrator site
 gem 'rails_admin'
+gem 'rails_admin_material'
 
 gem 'kaminari'
 
@@ -74,7 +75,7 @@ group :development, :test do
 end
 
 group :development do
-  # Annotate Rails classes with schema and routes info 
+  # Annotate Rails classes with schema and routes info
   gem 'annotate'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -84,7 +85,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'guard-ctags-bundler'
-  
+
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry'
