@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :branches
   resources :sections
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'welcome/index'
 
   resources :post_graduations
   get 'welcome/index'

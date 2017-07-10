@@ -342,5 +342,8 @@ body {
 .footer-copyright {
   font-size: 14px;
 }
+
+$roboto-font-path: "roboto/" !default;
 @import "materialize";
+@import "materialize/components/roboto";
 @import "material_icons";
