@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170626153022) do
+ActiveRecord::Schema.define(version: 20170718205452) do
 
   create_table "branches", force: :cascade do |t|
     t.string "name"
@@ -39,6 +39,30 @@ ActiveRecord::Schema.define(version: 20170626153022) do
     t.integer "kind"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.integer "section_id"
+    t.integer "post_graduation_id"
+    t.string "war_name"
+    t.string "name"
+    t.string "register"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["post_graduation_id"], name: "index_users_on_post_graduation_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["section_id"], name: "index_users_on_section_id"
   end
 
 end
