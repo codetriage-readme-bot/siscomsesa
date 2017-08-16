@@ -107,7 +107,7 @@ guard 'migrate' do
   watch('db/seeds.rb')
 end
 
-guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"] do
+guard 'ctags-bundler', src_path: ['app', 'lib', 'spec/support'] do
   watch(/^(app|lib|spec\/support)\/.*\.rb$/)
   watch('Gemfile.lock')
 end

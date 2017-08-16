@@ -15,9 +15,9 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 
 # Materialize Sass version for Rails Asset Pipeline
-gem 'materialize-sass'
-gem 'material_icons'
 gem 'jquery-turbolinks'
+gem 'material_icons'
+gem 'materialize-sass'
 
 # Use rails_admin gem for administrator site
 gem 'rails_admin'
@@ -72,6 +72,9 @@ group :development, :test do
   gem 'guard-migrate'
   gem 'guard-rails'
   gem 'guard-rspec'
+
+  gem 'overcommit'
+  gem 'rubocop'
 end
 
 group :development do

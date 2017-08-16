@@ -28,12 +28,12 @@ RSpec.describe PostGraduationsController, type: :controller do
   # PostGraduation. As you add validations to PostGraduation, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
-      {
-        name: 'MyString',
-        initials: 'MyString',
-        seniority: 1,
-        status: 'active'
-      }
+    {
+      name: 'MyString',
+      initials: 'MyString',
+      seniority: 1,
+      status: 'active'
+    }
   end
 
   let(:invalid_attributes) do

@@ -42,6 +42,11 @@ ActiveRecord::Schema.define(version: 20170718205452) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.integer "section_id"
+    t.integer "post_graduation_id"
+    t.string "war_name"
+    t.string "register"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -52,11 +57,6 @@ ActiveRecord::Schema.define(version: 20170718205452) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.integer "section_id"
-    t.integer "post_graduation_id"
-    t.string "war_name"
-    t.string "name"
-    t.string "register"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

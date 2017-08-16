@@ -15,9 +15,15 @@
 #
 # Uncomment the following lines to make the configuration take effect.
 
+gemfile: Gemfile
+
 PreCommit:
+  BundleCheck:
+    enabled: true
+
   RuboCop:
     enabled: true
+    command: ['bundle', 'exec', 'rubocop', '--rails'] #Invoke within Bundler context
     on_warn: fail # Treat all warnings as failures
 
   TrailingWhitespace:

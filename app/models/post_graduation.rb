@@ -14,5 +14,7 @@
 class PostGraduation < ApplicationRecord
   enum status: %i[active inactive]
 
-  validates_presence_of :name, :initials, :seniority, :status
+  has_many :users
+
+  validates :name, :initials, :seniority, :status, presence: true
 end

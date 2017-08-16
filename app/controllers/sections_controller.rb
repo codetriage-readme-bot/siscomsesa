@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-  before_action :set_section, only: [:show, :edit, :update, :destroy]
+  before_action :set_section, only: %i[show edit update destroy]
 
   # GET /sections
   # GET /sections.json
@@ -9,8 +9,7 @@ class SectionsController < ApplicationController
 
   # GET /sections/1
   # GET /sections/1.json
-  def show
-  end
+  def show; end
 
   # GET /sections/new
   def new
@@ -18,8 +17,7 @@ class SectionsController < ApplicationController
   end
 
   # GET /sections/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /sections
   # POST /sections.json
@@ -62,13 +60,14 @@ class SectionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_section
-      @section = Section.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def section_params
-      params.require(:section).permit(:name, :initials, :status, :observation, :kind)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_section
+    @section = Section.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def section_params
+    params.require(:section).permit(:name, :initials, :status, :observation, :kind)
+  end
 end
