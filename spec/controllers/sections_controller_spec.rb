@@ -42,7 +42,7 @@ RSpec.describe SectionsController, type: :controller do
       name: '',
       initials: '',
       observation: '',
-      kind: 'pelotao',
+      kind: 'em',
       status: 'active'
     }
   end
