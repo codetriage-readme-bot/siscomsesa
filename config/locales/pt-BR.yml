@@ -4,6 +4,7 @@ pt-BR:
       branch: Ramal
       post_graduation: Posto e Graduação
       section: Seção
+      user: Usuário
     attributes:
       branch:
         created_at: Criado em
@@ -41,6 +42,12 @@ pt-BR:
         statuses:
           active: Ativo
           inactive: Desativado
+      user:
+        email: "E-Mail"
+        name: Nome
+        post_graduation: "Posto/Graduação"
+        register: "Documentação"
+        war_name: "Nome de Guerra"
   branches:
     edit:
       edit: Editar Ramal

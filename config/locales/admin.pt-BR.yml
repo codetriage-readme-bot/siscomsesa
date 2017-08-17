@@ -84,7 +84,7 @@ pt-BR:
         link: Adicionar novo %{model_label}
         done: Adicionado
       edit:
-        title: Editar %{model_label} '%{object_label}'
+        title: "Editar %{model_label} '%{object_label}'"
         menu: Editar
         breadcrumb: Editar
         link: Editar este %{model_label}

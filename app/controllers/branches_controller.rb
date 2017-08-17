@@ -1,5 +1,5 @@
 class BranchesController < ApplicationController
-  before_action :set_branch, only: [:show, :edit, :update, :destroy]
+  before_action :set_branch, only: %i[show edit update destroy]
 
   # GET /branches
   # GET /branches.json
@@ -9,8 +9,7 @@ class BranchesController < ApplicationController
 
   # GET /branches/1
   # GET /branches/1.json
-  def show
-  end
+  def show; end
 
   # GET /branches/new
   def new
@@ -18,8 +17,7 @@ class BranchesController < ApplicationController
   end
 
   # GET /branches/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /branches
   # POST /branches.json
@@ -62,13 +60,14 @@ class BranchesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_branch
-      @branch = Branch.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def branch_params
-      params.require(:branch).permit(:name, :number, :status, :section_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_branch
+    @branch = Branch.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def branch_params
+    params.require(:branch).permit(:name, :number, :status, :section_id)
+  end
 end

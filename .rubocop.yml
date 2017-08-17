@@ -1060,6 +1060,9 @@ Metrics/LineLength:
   Description: 'Limit lines to 80 characters.'
   StyleGuide: '#80-character-limits'
   Enabled: true
+  Exclude:
+    - 'db/schema.rb'
+    - 'spec/**/*'
 
 Metrics/MethodLength:
   Description: 'Avoid methods longer than 10 lines of code.'
@@ -1069,6 +1072,9 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Description: 'Avoid long blocks with many lines.'
   Enabled: true
+  Exclude:
+    - 'db/schema.rb'
+    - 'spec/**/*'
 
 Metrics/ParameterLists:
   Description: 'Avoid parameter lists longer than three or four parameters.'
@@ -1363,6 +1369,8 @@ Lint/UselessAssignment:
   Description: 'Checks for useless assignment to a local variable.'
   StyleGuide: '#underscore-unused-vars'
   Enabled: true
+  Exclude:
+    - 'spec/**/*'
 
 Lint/UselessComparison:
   Description: 'Checks for comparison of something with itself.'

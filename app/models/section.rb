@@ -17,4 +17,7 @@ class Section < ApplicationRecord
   enum kind: %i[cmdo cia em scmdo section]
 
   has_many :branch
+  has_many :user
+
+  validates :name, :initials, :status, :kind, presence: true
 end
