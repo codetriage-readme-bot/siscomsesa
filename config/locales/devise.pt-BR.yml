@@ -46,9 +46,17 @@ pt-BR:
       update_needs_confirmation: "Você atualizou sua conta com sucesso, mas precisamos verificar o seu novo endereço de e-mail. Por favor, verifique seu e-mail e clique no link de confirmação para confirmar o seu novo endereço de e-mail."
       updated: "Sua conta foi atualizada com sucesso."
     sessions:
+      new:
+        login: 'Logar'
+        new: 'Login'
+        remember_me: 'Me mantenha logado'
       signed_in: "Logado com sucesso."
       signed_out: "Saiu com sucesso."
       already_signed_out: "Saiu com sucesso."
+    shared:
+      links:
+        forgot_password: 'Esqueceu a senha?'
+        sign_up: 'Cadastrar'
     unlocks:
       send_instructions: "Você receberá um e-mail com instruções sobre como desbloquear sua conta, em poucos minutos."
       send_paranoid_instructions: "Se a sua conta existir, você receberá um e-mail com instruções sobre como desbloqueá-la, em poucos minutos."
