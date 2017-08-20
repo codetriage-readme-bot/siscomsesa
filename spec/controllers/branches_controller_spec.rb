@@ -42,7 +42,7 @@ RSpec.describe BranchesController, type: :controller do
 
   describe 'GET #index' do
     it 'returns a success response' do
-      branch = Branch.create! valid_attributes
+      Branch.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_success
     end
