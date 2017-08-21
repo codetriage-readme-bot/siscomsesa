@@ -77,6 +77,7 @@ group :development, :test do
   gem 'overcommit'
   gem 'rubocop'
 
+  gem 'coveralls', require: false
   gem 'simplecov', require: false, group: :test
 end
 
