@@ -5,5 +5,4 @@
 [![Code Triagers Badge](https://www.codetriage.com/diegobiavati/siscomsesa/badges/users.svg)](https://www.codetriage.com/diegobiavati/siscomsesa)
 [![Coverage Status](https://coveralls.io/repos/github/diegobiavati/siscomsesa/badge.svg?branch=master)](https://coveralls.io/github/diegobiavati/siscomsesa?branch=master)
 [![Code Climate](https://codeclimate.com/github/diegobiavati/siscomsesa/badges/gpa.svg)](https://codeclimate.com/github/diegobiavati/siscomsesa)
-[![Test Coverage](https://codeclimate.com/github/diegobiavati/siscomsesa/badges/coverage.svg)](https://codeclimate.com/github/diegobiavati/siscomsesa/coverage)
 [![Issue Count](https://codeclimate.com/github/diegobiavati/siscomsesa/badges/issue_count.svg)](https://codeclimate.com/github/diegobiavati/siscomsesa)
