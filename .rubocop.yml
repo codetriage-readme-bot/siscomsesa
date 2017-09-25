@@ -340,7 +340,7 @@ Layout/TrailingWhitespace:
 
 #################### Style ###############################
 
-Style/AccessorMethodName:
+Naming/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
   StyleGuide: '#accessor_mutator_method_names'
   Enabled: true
@@ -365,7 +365,7 @@ Style/AsciiComments:
   StyleGuide: '#english-comments'
   Enabled: true
 
-Style/AsciiIdentifiers:
+Naming/AsciiIdentifiers:
   Description: 'Use only ascii symbols in identifiers.'
   StyleGuide: '#english-identifiers'
   Enabled: true
@@ -412,7 +412,7 @@ Style/CharacterLiteral:
   StyleGuide: '#no-character-literals'
   Enabled: true
 
-Style/ClassAndModuleCamelCase:
+Naming/ClassAndModuleCamelCase:
   Description: 'Use CamelCase for classes and modules.'
   StyleGuide: '#camelcase-classes'
   Enabled: true
@@ -459,7 +459,7 @@ Style/ConditionalAssignment:
                  of assigning that variable inside of each branch.
   Enabled: true
 
-Style/ConstantName:
+Naming/ConstantName:
   Description: 'Constants should use SCREAMING_SNAKE_CASE.'
   StyleGuide: '#screaming-snake-case'
   Enabled: true
@@ -519,7 +519,7 @@ Style/EvenOdd:
   StyleGuide: '#predicate-methods'
   Enabled: true
 
-Style/FileName:
+Naming/FileName:
   Description: 'Use snake_case for source file names.'
   StyleGuide: '#snake-case-files'
   Enabled: true
@@ -634,7 +634,7 @@ Style/MethodDefParentheses:
   StyleGuide: '#method-parens'
   Enabled: true
 
-Style/MethodName:
+Naming/MethodName:
   Description: 'Use the configured style when naming methods.'
   StyleGuide: '#snake-case-symbols-methods-vars'
   Enabled: true
@@ -768,7 +768,7 @@ Style/OneLineConditional:
   StyleGuide: '#ternary-operator'
   Enabled: true
 
-Style/OpMethod:
+Naming/OpMethod:
   Description: 'When defining binary operators, name the argument other.'
   StyleGuide: '#other-arg'
   Enabled: true
@@ -809,7 +809,7 @@ Style/PerlBackrefs:
   StyleGuide: '#no-perl-regexp-last-matchers'
   Enabled: true
 
-Style/PredicateName:
+Naming/PredicateName:
   Description: 'Check the names of predicate methods.'
   StyleGuide: '#bool-methods-qmark'
   Enabled: true
@@ -988,12 +988,12 @@ Style/VariableInterpolation:
   StyleGuide: '#curlies-interpolate'
   Enabled: true
 
-Style/VariableName:
+Naming/VariableName:
   Description: 'Use the configured style when naming variables.'
   StyleGuide: '#snake-case-symbols-methods-vars'
   Enabled: true
 
-Style/VariableNumber:
+Naming/VariableNumber:
   Description: 'Use the configured style when numbering variables.'
   Enabled: true
 

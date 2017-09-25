@@ -62,7 +62,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
 
   # Use Brakeman
-  gem 'brakeman'
+  gem 'brakeman', require: false
 
   gem 'capybara', '~> 2.13'
   gem 'rspec-rails'
