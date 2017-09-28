@@ -20,7 +20,7 @@
     </thead>
     <tbody>
       <% @sections.each do |section| %>
-        <tr>
+        <tr class='hoverable'>
           <td><%= section.name %></td>
           <td><%= section.initials %></td>
           <td><%= t("activerecord.attributes.section.kinds.#{section.kind}") %>

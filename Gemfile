@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.4.2'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -62,7 +62,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
 
   # Use Brakeman
-  gem 'brakeman'
+  gem 'brakeman', require: false
 
   gem 'capybara', '~> 2.13'
   gem 'rspec-rails'

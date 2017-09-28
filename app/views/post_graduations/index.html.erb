@@ -21,7 +21,7 @@
 
     <tbody>
       <% @post_graduations.each do |post_graduation| %>
-        <tr>
+        <tr class='hoverable'>
           <td><%= post_graduation.name %></td>
           <td><%= post_graduation.initials %></td>
           <td><%= t("activerecord.attributes.post_graduation.statuses.#{post_graduation.status}") %></td>

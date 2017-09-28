@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.4.1
+- 2.4.2
 notifications:
   slack: biavati:80UJ1W4zUYesbsap2cNqZBLV
 script:
