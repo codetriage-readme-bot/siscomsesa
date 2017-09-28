@@ -20,7 +20,7 @@
     </thead>
     <tbody>
       <% @branches.each do |branch| %>
-        <tr>
+        <tr class='hoverable'>
           <td><%= branch.name %></td>
           <td><%= branch.number %></td>
           <td><%= t("activerecord.attributes.branch.statuses.#{branch.status}") %></td>
