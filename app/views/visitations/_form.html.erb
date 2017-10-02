@@ -1,0 +1,42 @@
+<%= form_with(model: visitation, local: true) do |form| %>
+  <% if visitation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(visitation.errors.count, "error") %> prohibited this visitation from being saved:</h2>
+
+      <ul>
+      <% visitation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :visitor_id %>
+    <%= form.text_field :visitor_id, id: :visitation_visitor_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :visitation_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :section_id %>
+    <%= form.text_field :section_id, id: :visitation_section_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :input %>
+    <%= form.datetime_select :input, id: :visitation_input %>
+  </div>
+
+  <div class="field">
+    <%= form.label :output %>
+    <%= form.datetime_select :output, id: :visitation_output %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

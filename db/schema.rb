@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_170_718_205_452) do
+ActiveRecord::Schema.define(version: 20_171_002_105_300) do
   create_table 'branches', force: :cascade do |t|
     t.string 'name'
     t.string 'number'
@@ -62,5 +62,27 @@ ActiveRecord::Schema.define(version: 20_170_718_205_452) do
     t.index ['post_graduation_id'], name: 'index_users_on_post_graduation_id'
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
     t.index ['section_id'], name: 'index_users_on_section_id'
+  end
+
+  create_table 'visitations', force: :cascade do |t|
+    t.integer 'visitor_id'
+    t.integer 'user_id'
+    t.integer 'section_id'
+    t.datetime 'input'
+    t.datetime 'output'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['section_id'], name: 'index_visitations_on_section_id'
+    t.index ['user_id'], name: 'index_visitations_on_user_id'
+    t.index ['visitor_id'], name: 'index_visitations_on_visitor_id'
+  end
+
+  create_table 'visitors', force: :cascade do |t|
+    t.string 'name'
+    t.string 'register'
+    t.string 'phone'
+    t.integer 'kind'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 end
