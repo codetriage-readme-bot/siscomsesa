@@ -88,9 +88,11 @@ pt-BR:
       email: E-Mail da ESA
       mission: Atender com qualidade o público da ESA
       owner: Seção de Comunicação Social da ESA
-      post_graduation: 'Postos e Graduações'
+      post_graduations: 'Postos e Graduações'
       sections: Seções
       site: Site da ESA
+      visitors: Visita
+      visitations: Visitação
   mensages:
     confirm_destroy: Tem certeza?
   post_graduations:

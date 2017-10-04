@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @visitor.name %>
+</p>
+
+<p>
+  <strong>Register:</strong>
+  <%= @visitor.register %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @visitor.phone %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @visitor.kind %>
+</p>
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>
