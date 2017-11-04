@@ -1,5 +1,7 @@
 {
   "name": "siscomsesa",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bower": "^1.8.2"
+  }
 }
