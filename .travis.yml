@@ -4,5 +4,5 @@ rvm:
 notifications:
   slack: biavati:80UJ1W4zUYesbsap2cNqZBLV
 script:
-- rails db:create db:migrate RAILS_ENV=test
-- rails spec RAILS_ENV=test
+- bundle exec rails db:create db:migrate RAILS_ENV=test
+- bundle exec rails spec RAILS_ENV=test
