@@ -54,6 +54,7 @@ GEM
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
     brakeman (4.1.1)
+    bugsnag (6.4.0)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.16.1)
@@ -368,6 +369,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   brakeman
+  bugsnag
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
