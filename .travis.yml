@@ -6,7 +6,5 @@ notifications:
 env:
 - RAILS_ENV=test
 script:
-- gem update --system
-- gem update
 - bin/rake db:create db:migrate
 - bin/rake spec
