@@ -1,28 +1,17 @@
-engines:
+version: '2'
+plugins:
   rubocop:
     enabled: true
-    #checks:
-    #	Rubocop/Metrics/ClassLength:
-    #  	enabled: false
-  golint:
-   	enabled: true
-  eslint:
-    enabled: true
-  csslint:
+  reek:
     enabled: true
   duplication:
-  	enabled: true
+    enabled: true
     config:
-    	languages:
-      - ruby
-      	#mass_threshold: 30
-      - javascript
-ratings:
-  paths:
-  - app/**
-  - lib/**
-  - "**.rb"
-  - "**.go"
-exclude_paths:
+      languages:
+        ruby:
+          mass_threshold: 18
+  markdownlint:
+    enabled: true
+exclude_patterns:
 - spec/**/*
 - "**/vendor/**/*"
