@@ -2,6 +2,8 @@
   "name": "siscomsesa",
   "private": true,
   "dependencies": {
-    "bower": "^1.8.2"
+    "bower": "^1.8.2",
+    "materialize-css": "^0.100.2",
+    "yarn": "^1.3.2"
   }
 }
