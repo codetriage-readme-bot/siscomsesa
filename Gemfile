@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 # Gems for use in Dokku
-gem 'pg'
+gem 'pg', '~>0.21'
 gem 'rails_12factor', group: :production
 
 # Devise for authentications
